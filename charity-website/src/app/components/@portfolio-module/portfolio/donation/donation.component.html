@@ -1,0 +1,244 @@
+<div class="tabs-container mt-5">
+  <div class="tabs">
+    <button
+      class="tab"
+      [class.active]="activeTab === 'money'"
+      (click)="openTab('money')">
+      Donate Money
+    </button>
+    <button
+      class="tab"
+      [class.active]="activeTab === 'cloth'"
+      (click)="openTab('cloth')">
+      Donate Cloth
+    </button>
+    <button
+      class="tab"
+      [class.active]="activeTab === 'stationery'"
+      (click)="openTab('stationery')">
+      Donate Stationery
+    </button>
+  </div>
+
+
+  <div id="money"  [class.active]="activeTab === 'money'" class="content active">
+    <h2>Donate Money</h2>
+    <p>Your financial contribution helps us make a difference in children's lives.</p>
+    <button class="donate-button">Proceed to Donate</button>
+  </div>
+
+  <div id="cloth" [class.active]="activeTab === 'cloth'" class="content">
+    <div class="form-header">
+      <h3>Cloth Donation Form</h3>
+    </div>
+    <!-- Impact Section -->
+    <div class="impact-section">
+      <h3>Your Donation Makes a Difference</h3>
+      <p>Help provide warm clothing to those in need by donating your gently used clothes.</p>
+    </div>
+
+    <form class="donation-form">
+      <!-- Personal Information -->
+      <div class="form-section">
+        <h4>Personal Information</h4>
+        <div class="form-group">
+          <label class="form-label" for="name">Donator Name</label>
+          <input type="text" id="name" class="form-input" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="address">Address</label>
+          <input type="text" id="address" class="form-input" placeholder="Enter your complete address" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="contact">Contact Number</label>
+          <input type="tel" id="contact" class="form-input" placeholder="Enter your contact number" required>
+        </div>
+      </div>
+
+      <!-- Donation Details -->
+      <div class="form-section">
+        <h4>Donation Details</h4>
+        <div class="form-group">
+          <label class="form-label" for="clothing-category">Clothing Category</label>
+          <select id="clothing-category" class="form-input" required>
+            <option value="">Select category</option>
+            <option value="shirts">Shirts</option>
+            <option value="pants">Pants</option>
+            <option value="jackets">Jackets</option>
+            <option value="shoes">Shoes</option>
+            <option value="other">Other Clothing Items</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="description">Description of Items</label>
+          <textarea id="description" class="form-input form-textarea" placeholder="Please describe the clothes you're donating (type, condition, quantity, etc.)" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="item-photo">Upload Photos</label>
+          <input type="file" id="item-photo" class="form-input" accept="image/*" multiple>
+          <small class="form-help">Optional: Upload photos of clothes you're donating</small>
+        </div>
+      </div>
+
+      <!-- Delivery Preferences -->
+      <div class="form-section">
+        <h4>Delivery Preferences</h4>
+        <div class="form-group">
+          <label class="form-label">Preferred Method</label>
+          <div class="radio-group">
+            <input type="radio" id="pickup" name="delivery" value="pickup">
+            <label for="pickup">Request Pickup</label>
+            <input type="radio" id="dropoff" name="delivery" value="dropoff">
+            <label for="dropoff">Drop-off at Collection Center</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="preferred-date">Preferred Date</label>
+          <input type="date" id="preferred-date" class="form-input">
+        </div>
+      </div>
+
+      <!-- Terms and Conditions -->
+      <div class="form-group">
+        <div class="checkbox-group">
+          <input type="checkbox" id="terms" required>
+          <label for="terms">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="covid" required>
+          <label for="covid">I confirm that all items are sanitized and comply with COVID-19 safety guidelines</label>
+        </div>
+      </div>
+
+      <button type="submit" class="form-submit">Submit Donation</button>
+    </form>
+
+    <!-- Additional Information -->
+    <div class="additional-info">
+      <h4>What Happens Next?</h4>
+      <p>After submitting your donation:</p>
+      <ol>
+        <li>You'll receive a confirmation email</li>
+        <li>Our team will contact you to confirm the pickup/drop-off details</li>
+        <li>You'll receive updates about your donation's impact</li>
+      </ol>
+    </div>
+  </div>
+
+  <div id="stationery" [class.active]="activeTab === 'stationery'" class="content">
+    <h2>Donate Stationery</h2>
+
+    <!-- Impact Section -->
+    <div class="impact-section">
+      <h3>Your Donation Makes a Difference</h3>
+      <p>Help children achieve their dreams by donating stationery items like notebooks, pens, and pencils.</p>
+    </div>
+    <form class="donation-form">
+      <!-- Personal Information -->
+      <div class="form-section">
+        <h4>Personal Information</h4>
+        <div class="form-group">
+          <label class="form-label" for="name">Donator Name</label>
+          <input type="text" id="name" class="form-input" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">Email Address</label>
+          <input type="email" id="email" class="form-input" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="address">Address</label>
+          <input type="text" id="address" class="form-input" placeholder="Enter your complete address" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="contact">Contact Number</label>
+          <input type="tel" id="contact" class="form-input" placeholder="Enter your contact number" required>
+        </div>
+      </div>
+
+      <!-- Donation Details -->
+      <div class="form-section">
+        <h4>Donation Details</h4>
+        <div class="form-group">
+          <label class="form-label" for="item-category">Item Category</label>
+          <select id="item-category" class="form-input" required>
+            <option value="">Select category</option>
+            <option value="notebooks">Notebooks/Paper Products</option>
+            <option value="writing">Writing Tools</option>
+            <option value="art">Art Supplies</option>
+            <option value="bags">School Bags</option>
+            <option value="other">Other Materials</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="description">Description of Items</label>
+          <textarea id="description" class="form-input form-textarea"
+                    placeholder="Please describe the items you wish to donate (type, condition, quantity, etc.)" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="item-photo">Upload Photos</label>
+          <input type="file" id="item-photo" class="form-input" accept="image/*" multiple>
+          <small class="form-help">Optional: Upload photos of items you're donating</small>
+        </div>
+      </div>
+
+      <!-- Delivery Preferences -->
+      <div class="form-section">
+        <h4>Delivery Preferences</h4>
+        <div class="form-group">
+          <label class="form-label">Preferred Method</label>
+          <div class="radio-group">
+            <input type="radio" id="pickup" name="delivery" value="pickup">
+            <label for="pickup">Request Pickup</label>
+            <input type="radio" id="dropoff" name="delivery" value="dropoff">
+            <label for="dropoff">Drop-off at Center</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="preferred-date">Preferred Date</label>
+          <input type="date" id="preferred-date" class="form-input">
+        </div>
+      </div>
+
+      <!-- Terms and Conditions -->
+      <div class="form-group">
+        <div class="checkbox-group">
+          <input type="checkbox" id="terms" required>
+          <label for="terms">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a></label>
+        </div>
+        <div class="checkbox-group">
+          <input type="checkbox" id="covid" required>
+          <label for="covid">I confirm that all items are sanitized and comply with COVID-19 safety guidelines</label>
+        </div>
+      </div>
+
+      <button type="submit" class="form-submit">Submit Donation</button>
+    </form>
+
+    <!-- Additional Information -->
+    <div class="additional-info">
+      <h4>What Happens Next?</h4>
+      <p>After submitting your donation:</p>
+      <ol>
+        <li>You'll receive a confirmation email</li>
+        <li>Our team will contact you to confirm the pickup/drop-off details</li>
+        <li>You'll receive updates about your donation's impact</li>
+      </ol>
+    </div>
+  </div>
+</div>

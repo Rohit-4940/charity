@@ -1,0 +1,366 @@
+$gradient-start: #1e9161;
+$gradient-end: #00b894;
+
+
+/* Animated Background */
+.animated-bg {
+  position: absolute;
+  inset: 0;
+  animation: moveBackground 4s linear infinite;
+  opacity: 0.5;
+  z-index: -1;
+}
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(45deg, #2d3436, #000000);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientText 3s ease infinite;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.2;
+}
+
+/* Button Styles */
+.hero-buttons .btn {
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.btn-gradient {
+  background: $gradient-end;
+  border: none;
+  color: white;
+  overflow: hidden;
+  z-index: 1;
+}
+.help {
+  color: white;
+}
+
+
+.btn-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+}
+
+.btn-outline-dark {
+  border: 2px solid #2d3436;
+}
+
+.btn-outline-dark:hover {
+  background: #2d3436;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(45, 52, 54, 0.2);
+}
+
+/* Tech Stack */
+.tech-stack {
+  gap: 1.5rem;
+  animation: fadeIn 1s ease-out 1s forwards;
+  opacity: 0;
+}
+
+.tech-icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.tech-icons i {
+  font-size: 1.75rem;
+  color: #2d3436;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tech-icons i:hover {
+  transform: translateY(-5px) scale(1.1);
+  background: linear-gradient(45deg, $gradient-start, $gradient-end);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* Green opacity overlay */
+.hero-section .animated-bg::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Hero Image Container */
+.hero-image-container {
+  position: relative;
+}
+
+.hero-image {
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgb(26, 162, 94);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: floatImage 4s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+
+.hero-image:hover {
+  transform: translateY(-5px) rotateY(5deg);
+}
+/* Floating Shapes */
+.floating-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  z-index: 1;
+  filter: blur(5px);
+}
+/* Scroll Indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fadeIn 1s ease-out 2s forwards;
+  opacity: 0;
+}
+
+.mouse {
+  width: 30px;
+  height: 50px;
+  border: 2px solid #2d3436;
+  border-radius: 15px;
+  position: relative;
+}
+
+.wheel {
+  width: 4px;
+  height: 8px;
+  background: #2d3436;
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+  animation: scroll 1.5s ease infinite;
+}
+
+/* Animations */
+@keyframes moveBackground {
+  0% { background-position: 0 0; }
+  100% { background-position: 60px 60px; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0) translateZ(0); }
+  50% { transform: translateY(-10px) translateZ(20px); }
+}
+
+@keyframes scroll {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  100% { transform: translate(-50%, 20px); opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-30px) translateZ(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) translateZ(50px);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientText {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Responsive Styles */
+@media (max-width: 1199.98px) {
+  .hero-content {
+    padding: 2rem 0;
+  }
+
+  .hero-image {
+    max-width: 80%;
+  }
+
+  .experience-badge {
+    right: 15%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .hero-section {
+  }
+
+  .hero-image-container {
+    margin: 2rem 0;
+  }
+
+  .experience-badge {
+    padding: 0.75rem 1.25rem;
+    right: 10%;
+  }
+
+  .gradient-text {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .pre-heading {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .hero-buttons {
+    gap: 1rem;
+  }
+
+  .experience-badge {
+    right: 5%;
+    bottom: 5%;
+  }
+
+  .experience-badge .number {
+    font-size: 1.5rem;
+  }
+
+  .tech-stack {
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-content {
+    padding: 1rem 0;
+  }
+
+  .hero-image {
+    max-width: 90%;
+  }
+
+  .tech-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .experience-badge {
+    padding: 0.5rem 1rem;
+  }
+
+  .experience-badge .number {
+    font-size: 1.25rem;
+  }
+
+  .experience-badge .text {
+    font-size: 0.75rem;
+  }
+}
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--card-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color);
+  box-shadow: 0 4px 15px var(--shadow-color);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  color: var(--primary-color);
+}
+
+
+app-chat-window {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+.hero-buttons .btn-outline-dark:hover {
+  color: white;
+  background-color: #1a8c64; /* Green color */
+  border-color: #1a8c64; /* Optional: to change the border color to green */
+}
+/* Hero Section Base Styles */
+.hero-section {
+  background: #f8f9fa;
+  isolation: isolate;
+  min-height: 100vh; /* Ensures the hero section takes the full height initially */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hero Image */
+.hero-section .animated-bg img {
+  width: 100%;
+  height: auto; /* Ensures the image resizes properly */
+  object-fit: cover;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 767.98px) {
+  .hero-section {
+    min-height: 20vh !important;
+    padding: 2rem 0;
+  }
+
+  .hero-content {
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .gradient-text {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  .hero-buttons .btn {
+    font-size: 1rem; /* Adjusts button text size on smaller screens */
+  }
+
+  .animated-bg {
+    animation: none; /* Disable animation for a more stable mobile experience */
+  }
+
+  .scroll-indicator {
+    display: none; /* Optional: Hide scroll indicator on mobile */
+  }
+}
+
+/* For tablets (if necessary) */
+@media (max-width: 991.98px) {
+  .hero-section {
+    min-height: 80vh; /* Slightly reduced height on tablets */
+  }
+}
+

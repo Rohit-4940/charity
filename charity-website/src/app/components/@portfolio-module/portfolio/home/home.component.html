@@ -1,0 +1,48 @@
+<!-- Hero Section -->
+<section id="home" class="hero-section position-relative overflow-hidden overlay">
+  <div class="animated-bg">
+    <img
+      src="/assets/image/banner.png"
+      alt="Sanjay's Profile"
+    >
+  </div>
+  <div class="container position-relative h-100">
+    <div class="row align-items-center g-4 g-lg-5">
+      <!-- Content Column -->
+      <div class="col-lg-6 hero-content order-2 order-lg-1">
+        <div class="animate-text-wrap text-center text-lg-start mx-auto mx-lg-0" style="max-width: 540px;">
+          <h1 class="display-4 fw-bold mb-3 gradient-text lh-sm help" style="color: #1e9161">
+            Help the children
+            When They Need
+          </h1>
+          <p style="color: #1e9161">
+            Every child deserves a chance to dream, learn, and grow. Let's help make those dreams come true
+          </p>
+          <div class="hero-buttons d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-lg-start">
+            <a class="btn btn-gradient btn-lg px-4 py-3">
+              <span>View Our Works</span>
+              <i class="bi bi-arrow-right ms-2"></i>
+            </a>
+            <a class="btn btn-outline-dark btn-lg px-4 py-3 bg-white" (click)="openChat()">
+              <i class="bi bi-chat-dots me-2"></i>
+              <span style="color: #1a8c64">Let's Talk</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator d-none d-lg-block">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+  </div>
+</section>
+
+<app-skills></app-skills>
+
+<app-project></app-project>
+
+<app-contact-me></app-contact-me>
