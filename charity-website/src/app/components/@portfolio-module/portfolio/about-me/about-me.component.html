@@ -1,78 +1,52 @@
-<div class="main-container">
-  <!-- Hero Section -->
-  <section class="hero-section" [@fadeIn]>
-    <div class="hero-content">
-      <div class="profile-container">
-        <div class="profile-background"></div>
-        <img src="/assets/image/sanjuprofile.png" alt="Profile Picture" class="profile-img" loading="lazy">
-      </div>
-      <h1 class="hero-title">
-        {{ displayedText }}
-        <span class="wave">👋</span>
-      </h1>
-      <p class="hero-subtitle">Full Stack Developer</p>
-      <div class="social-links">
-        <a href="https://github.com/yourusername" target="_blank" class="social-link">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="mailto:your.email@example.com" class="social-link">
-          <i class="fas fa-envelope"></i>
-        </a>
+<section class="about-section">
+  <!-- Hero Banner -->
+  <div class="hero-container">
+    <img src="./assets/image/about.jpg" class="hero-image">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h1>About Give With Smile</h1>
+        <p>Empowering Every Child’s Future</p>
       </div>
     </div>
-  </section>
+  </div>
 
-  <!-- About Section -->
-  <section class="about-section" [@fadeInUp]>
-    <div class="section-header">
-      <h2>About Me</h2>
-      <div class="section-underline"></div>
-    </div>
+  <!-- About Content -->
+  <div class="container about-content">
+    <h2 class="section-title">Our Mission</h2>
+    <p>
+      At <strong>Give With Smile</strong>
+       We believe that every child deserves the opportunity to learn, grow, and thrive. Our organization is dedicated to helping underprivileged children by providing access to education, clothing, and essential resources.
 
-    <div class="about-content">
-      <div class="about-card">
-        <div class="about-text">
-          <p class="text-center">
-            I'm a passionate Full Stack Developer with over 2 years of experience in creating
-            modern web applications. I specialize in building scalable solutions using cutting-edge
-            technologies and best practices in software development.
-          </p>
-          <p class="text-center">
-            My goal is to create intuitive and performant applications that make a real difference
-            in users' lives while maintaining clean, maintainable code.
-          </p>
-        </div>
+      As the founder, I, Rohit Chapagain, have established this platform to support children in need. Our mission is to ensure that every child, regardless of gender, background, or financial status, has the right to education. Every boy and girl deserves the opportunity to go to school and build a better future.
+    </p>
 
-        <div class="quick-info">
-          <div class="info-item">
-            <i class="fas fa-map-marker-alt"></i>
-            <span>{{ personalDetails.address.city || ''}}, {{ personalDetails.address.country || ''}}</span>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-graduation-cap"></i>
-            <span>BCA (Bachelor of Computer Application)</span>
-          </div>
-          <div class="info-item">
-            <i class="fas fa-code-branch"></i>
-            <span>2+ Years Experience</span>
-          </div>
-        </div>
-      </div>
+    <h2 class="section-title">How You Can Help</h2>
+    <p>
+      Through our website, anyone willing to donate money, clothes, or stationery items can do so easily. Your donations will be directly distributed to children in need, ensuring they receive the support they deserve. To maintain transparency, we will publish the names of donors on our website so they can be assured that their contributions are reaching the right hands.    </p>
 
-      <div class="skills-section">
-        <h3>Technical Skills</h3>
-        <div class="skills-grid">
-          @for(skill of skills; track skill) {
-            <div class="skill-item">
-              <!--<i [class]="skill?.icon"></i>-->
-              <span>{{ skill }}</span>
-            </div>
-          }
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
+    <h2 class="section-title">Join Us as a Volunteer</h2>
+    <p>
+      We believe that helping others is a collective effort. Anyone, whether a donor or not, can join us as a volunteer when we organize events to visit and support children in different areas. Our goal is to build a community where people come together to make a meaningful impact.
+      Together, we can transform lives and create a brighter future for every child. Join us in our mission and be the reason a child smiles today!    </p>
+    <h2 class="section-title"> Why I Started Give With Smile</h2>
+    <p>
+    As the founder of Give With Smile, I, Rohit Chapagain, have personally witnessed the struggles faced by children in remote areas of Nepal. During my visits to these regions, I saw countless children unable to attend school simply because their parents couldn’t afford it. Some children lacked interest in school due to difficult circumstances, while others attended in extremely poor conditions.
+
+    I saw children walking barefoot or wearing worn-out slippers, carrying their books and notebooks in their hands because they didn’t have school bags. Many of them had to walk long distances—sometimes 2 to 3 kilometers or more—just to reach school. The paths they took were often dangerous, yet they continued their journey with determination.
+
+    Before even setting off for school, these children had to complete household chores and help their families. Despite their hardships, they had a strong desire to learn and grow, but poverty held them back.
+
+    This is why I created Give With Smile—to bridge the gap and provide these children with the resources they need to pursue their education. A small donation—whether it's money, clothes, school supplies, or even a pair of shoes—can change a child's future.
+
+    Together, we can uplift these children, giving them hope, dignity, and a chance to build a better tomorrow. Let’s join hands and make a difference—one smile at a time!
+    </p>
+    <br>
+    <hr>
+    <br>
+    <p style="color: #1a8c64"><i>I have seen children walking miles to school without shoes, yet with dreams in their eyes. Poverty should not define their future—together, we can rewrite their story.</i>
+    <br>
+      <span class="float-end">"Rohit Chapagain"</span>
+    </p>
+  </div>
+
+</section>

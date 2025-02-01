@@ -5,6 +5,7 @@ import {WorksComponent} from '../work/works.component';
 import {ChatWindowComponent} from '../chat-window/chat-window.component';
 import {PersonalDetails} from '../../../../@core/data/personal-details';
 import {ChatService} from '../../../../shared-service/chat.service';
+import {Router} from '@angular/router';
 
 
 @Component({
@@ -24,8 +25,13 @@ export class HomeComponent {
   personalDetails = PersonalDetails;
 
   chatService: ChatService = inject(ChatService);
+  router: Router = inject(Router);
 
   openChat() {
     this.chatService.toggleChat();
+  }
+
+  openAbout() {
+    this.router.navigate(['/portfolio/about']);
   }
 }

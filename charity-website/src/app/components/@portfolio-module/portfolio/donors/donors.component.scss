@@ -1,0 +1,55 @@
+.container {
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2rem; /* Reducing font size for smaller screens */
+}
+
+p {
+  font-size: 1rem; /* Adjust paragraph font size for readability */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+/* Make table headings stand out */
+th {
+  background-color: #1e9161;
+  color: white;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  table th, table td {
+    padding: 8px; /* Smaller padding on mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  p {
+    font-size: 0.85rem;
+  }
+}

@@ -1,5 +1,6 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {Projects} from '../../../../@core/data/projects';
+import {Router} from '@angular/router';
 
 interface Project {
   projectName: string;
@@ -20,6 +21,7 @@ interface Project {
 })
 export class ProjectComponent {
   projects = Projects;
+  router: Router = inject(Router);
 
   filteredProjects: Project[] = this.projects;
   selectedTech: string = '';
@@ -53,5 +55,9 @@ export class ProjectComponent {
       const matchesTech = !this.selectedTech || project.languageUsed.includes(this.selectedTech);
       return matchesSearch && matchesTech;
     });
+  }
+
+  callDonation() {
+    this.router.navigate(['/portfolio/donation']);
   }
 }
