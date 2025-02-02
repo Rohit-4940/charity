@@ -3,14 +3,14 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'portfolio',
+    redirectTo: 'charity',
     pathMatch: 'full'
   },
   {
-    path: 'portfolio',
+    path: 'charity',
     loadChildren: () =>
-      import('../app/components/@portfolio-module/portfolio.routes').then(
-        (m) => m.PortfolioRoutes
+      import('./components/@charity-module/charity.routes').then(
+        (m) => m.CharityRoutes
       ),
     data: { preload: true, title: 'Portfolio' }
   },
@@ -49,7 +49,7 @@ export const routes: Routes = [
         return null;
       },
     },
-    redirectTo: 'portfolio', // Or a 404 page
+    redirectTo: 'charity', // Or a 404 page
     pathMatch: 'full'
   }
 

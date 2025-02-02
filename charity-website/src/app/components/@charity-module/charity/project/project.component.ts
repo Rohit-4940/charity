@@ -58,6 +58,6 @@ export class ProjectComponent {
   }
 
   callDonation() {
-    this.router.navigate(['/portfolio/donation']);
+    this.router.navigate(['/charity/donation']);
   }
 }

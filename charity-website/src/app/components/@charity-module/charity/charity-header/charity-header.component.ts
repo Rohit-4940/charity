@@ -7,11 +7,11 @@ import {Router, RouterLink, RouterLinkActive} from '@angular/router';
     RouterLinkActive,
     RouterLink
   ],
-  templateUrl: './portfolio-header.component.html',
+  templateUrl: './charity-header.component.html',
   standalone: true,
-  styleUrl: './portfolio-header.component.scss'
+  styleUrl: './charity-header.component.scss'
 })
-export class PortfolioHeaderComponent {
+export class CharityHeaderComponent {
   isScrolled = false;
 
   router: Router = inject(Router);

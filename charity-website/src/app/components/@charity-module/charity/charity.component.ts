@@ -1,25 +1,25 @@
 import {Component, inject, OnInit} from '@angular/core';
-import {PortfolioHeaderComponent} from './portfolio-header/portfolio-header.component';
+import {CharityHeaderComponent} from './charity-header/charity-header.component';
 import {NavigationEnd, Router, RouterOutlet} from '@angular/router';
 import {ScrollToTopComponent} from '../../scroll-up/scroll-to-top.component';
 import {ViewportScroller} from '@angular/common';
 import {animate, query, style, transition, trigger} from '@angular/animations';
-import {PortfolioFooterComponent} from './portfolio-footer/portfolio-footer.component';
+import {CharityFooterComponent} from './charity-footer/charity-footer.component';
 import {ChatWindowComponent} from './chat-window/chat-window.component';
 import {ChatService} from '../../../shared-service/chat.service';
 
 @Component({
   selector: 'app-portfolio',
   imports: [
-    PortfolioHeaderComponent,
+    CharityHeaderComponent,
     RouterOutlet,
     ScrollToTopComponent,
-    PortfolioFooterComponent,
+    CharityFooterComponent,
     ChatWindowComponent
   ],
-  templateUrl: './portfolio.component.html',
+  templateUrl: './charity.component.html',
   standalone: true,
-  styleUrl: './portfolio.component.scss',
+  styleUrl: './charity.component.scss',
   animations: [
     trigger('routeAnimations', [
       transition('* <=> *', [
@@ -48,7 +48,7 @@ import {ChatService} from '../../../shared-service/chat.service';
     ]),
   ]
 })
-export class PortfolioComponent implements OnInit{
+export class CharityComponent implements OnInit{
   router: Router = inject(Router);
   viewportScroller: ViewportScroller = inject(ViewportScroller);
   chatService: ChatService = inject(ChatService);

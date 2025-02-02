@@ -32,6 +32,6 @@ export class HomeComponent {
   }
 
   openAbout() {
-    this.router.navigate(['/portfolio/about']);
+    this.router.navigate(['/charity/about']);
   }
 }

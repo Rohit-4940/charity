@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-export const PortfolioRoutes: Routes = [
+export const CharityRoutes: Routes = [
   {
     path: '',
     redirectTo: 'home',
@@ -9,14 +9,14 @@ export const PortfolioRoutes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('../@portfolio-module/portfolio/portfolio.component').then(
-        (m) => m.PortfolioComponent
+      import('./charity/charity.component').then(
+        (m) => m.CharityComponent
       ),
     children: [
       {
         path: 'home',
         loadComponent: () =>
-          import('../@portfolio-module/portfolio/home/home.component').then(
+          import('./charity/home/home.component').then(
             (m) => m.HomeComponent
           ),
         data: {
@@ -27,7 +27,7 @@ export const PortfolioRoutes: Routes = [
       {
         path: 'projects',
         loadComponent: () =>
-          import('./portfolio/project/project.component').then(
+          import('./charity/project/project.component').then(
             (m) => m.ProjectComponent
           ),
         data: {
@@ -38,7 +38,7 @@ export const PortfolioRoutes: Routes = [
       {
         path: 'contact',
         loadComponent: () =>
-          import('./portfolio/contact-me/contact-me.component').then(
+          import('./charity/contact-me/contact-me.component').then(
             (m) => m.ContactMeComponent
           ),
         data: {
@@ -49,7 +49,7 @@ export const PortfolioRoutes: Routes = [
       {
         path: 'event',
         loadComponent: () =>
-          import('./portfolio/event/event.component').then(
+          import('./charity/event/event.component').then(
             (m) => m.EventComponent
           ),
         data: {
@@ -60,7 +60,7 @@ export const PortfolioRoutes: Routes = [
       {
         path: 'about',
         loadComponent: () =>
-          import('./portfolio/about-me/about-me.component').then(
+          import('./charity/about-me/about-me.component').then(
             (m) => m.AboutMeComponent
           ),
         data: {
@@ -71,7 +71,7 @@ export const PortfolioRoutes: Routes = [
       {
         path: 'donor',
         loadComponent: () =>
-          import('./portfolio/donors/donors.component').then(
+          import('./charity/donors/donors.component').then(
             (m) => m.DonorsComponent
           ),
         data: {
@@ -82,7 +82,7 @@ export const PortfolioRoutes: Routes = [
       {
         path: 'donation',
         loadComponent: () =>
-          import('./portfolio/donation/donation.component').then(
+          import('./charity/donation/donation.component').then(
             (m) => m.DonationComponent
           ),
         data: {
@@ -93,7 +93,7 @@ export const PortfolioRoutes: Routes = [
       {
         path: 'skills',
         loadComponent: () =>
-          import('./portfolio/work/works.component').then(
+          import('./charity/work/works.component').then(
             (m) => m.WorksComponent
           ),
         data: {
@@ -104,7 +104,7 @@ export const PortfolioRoutes: Routes = [
       {
         path: 'blogs',
         loadComponent: () =>
-          import('./portfolio/blog-list/blog-list.component').then(
+          import('./charity/blog-list/blog-list.component').then(
             (m) => m.BlogListComponent
           ),
         data: {
@@ -115,7 +115,7 @@ export const PortfolioRoutes: Routes = [
       {
         path: 'post/:postId',
         loadComponent: () =>
-          import('./portfolio/blog-list/blog-post/blog-post.component').then(
+          import('./charity/blog-list/blog-post/blog-post.component').then(
             (m) => m.BlogPostComponent
           ),
         data: {
