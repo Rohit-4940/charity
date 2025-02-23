@@ -6,6 +6,7 @@ import {ChatWindowComponent} from '../chat-window/chat-window.component';
 import {PersonalDetails} from '../../../../@core/data/personal-details';
 import {ChatService} from '../../../../shared-service/chat.service';
 import {Router} from '@angular/router';
+import {BlogListComponent} from '../blog-list/blog-list.component';
 
 
 @Component({
@@ -15,6 +16,7 @@ import {Router} from '@angular/router';
     ContactMeComponent,
     WorksComponent,
     ChatWindowComponent,
+    BlogListComponent,
   ],
   templateUrl: './home.component.html',
   standalone: true,

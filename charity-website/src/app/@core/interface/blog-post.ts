@@ -4,8 +4,6 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   author: Author;
-  category: string;
-  tags: string[];
   imageUrl: string;
   readTime: number;
   publishDate: Date;

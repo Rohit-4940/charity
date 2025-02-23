@@ -7,7 +7,6 @@ import {
   DynamicTableComponent,
   TableConfig
 } from '../../../common-components/dynamic-table/dynamic-table.component';
-import {BlogService} from '../../../shared-service/@api-services/blog.service';
 import {BreadcrumbsComponent} from '../../../common-components/breadcrumbs/breadcrumbs.component';
 
 interface User {
@@ -35,7 +34,6 @@ interface User {
   styleUrl: './blogs.component.scss'
 })
 export class BlogsComponent implements OnInit{
-  blogDataService: BlogService = inject(BlogService);
   data: any;
 
   columns: ColumnConfig[] = [
@@ -113,9 +111,6 @@ export class BlogsComponent implements OnInit{
   ];
 
   ngOnInit(): void {
-    this.blogDataService.getBlogs().subscribe((fetchedData) => {
-      this.data = fetchedData;
-    });
   }
 
   onRowClick(item: any) {

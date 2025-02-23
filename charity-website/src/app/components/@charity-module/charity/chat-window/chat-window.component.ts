@@ -37,7 +37,7 @@ interface Message {
 })
 export class ChatWindowComponent implements OnInit{
 
-  @ViewChild('scrollContainer') private scrollContainer: ElementRef | undefined;
+  private scrollContainer: ElementRef | undefined;
   currentMessage = '';
 
   chatService: ChatService = inject(ChatService);

@@ -106,9 +106,9 @@ export class ChatService {
     else if (userMessage.toLowerCase() === 'help') {
       return 'Here are some commands you can use: \n- help: Show this help message\n- info: Get app info\n- clear: Clear chat history\n- joke: Receive a joke\n- quote: Receive a random quote';
     } else if (userMessage.toLowerCase() === 'info') {
-      return 'This is a Portfolio Chat App v1.0 belongs to Sanju ';
+      return 'This the givewithsmile pages';
     } else if (userMessage.toLowerCase() === 'about') {
-      return 'This is a Portfolio Chat App v1.0 belongs to Sanju ';
+      return 'visit the about us pages to get more about give with smile  ';
     } else if (userMessage.toLowerCase() === 'clear') {
       this.clearChat();
       return 'Chat history cleared!';

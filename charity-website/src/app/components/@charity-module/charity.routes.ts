@@ -112,17 +112,6 @@ export const CharityRoutes: Routes = [
           description: 'Read my blog posts on various topics',
         },
       },
-      {
-        path: 'post/:postId',
-        loadComponent: () =>
-          import('./charity/blog-list/blog-post/blog-post.component').then(
-            (m) => m.BlogPostComponent
-          ),
-        data: {
-          title: 'Blog Post',
-          description: 'View details of a specific blog post',
-        },
-      },
     ],
   },
 ];
